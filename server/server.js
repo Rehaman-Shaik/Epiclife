@@ -1,14 +1,15 @@
 import express from 'express';
+import financeRouter from './routes/financeRouter.js'
+import { mainController } from './controllers/mainController.js';
 
 const app = express();
 const port = 3000;
 
 
-app.listen(port, ()=>{
-    console.log(`Server started on port ${port}.`)
+app.listen(port, () => {
+    console.log('Server is started running on http://rehamanshaikofficial.xyz')
 })
 
+app.get("/", mainController);
 
-app.get("/", (req, res)=>{
-    res.send("<h1>Home page</h1>")
-});
+app.use("/", financeRouter)
