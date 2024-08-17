@@ -2,10 +2,11 @@ import express from 'express';
 import financeRouter from './routes/financeRouter.js'
 import { mainController } from './controllers/mainController.js';
 import usersRouter from './routes/usersRouter.js'
-import bodyParser from "body-parser";
+import cors from "cors"
 
 const app = express();
 const port = 3000;
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
