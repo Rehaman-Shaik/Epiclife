@@ -1,12 +1,13 @@
-function mainUsers(req, res){
+import { checkUserReturnResponse } from '../services/users.js'
+
+function mainUsers(req, res) {
     res.json({ "msg": "mainUsers" })
 }
 
-function userLogin(req, res) {
-    console.log("Body: ", req.body); // Only log req.body
-    const msg = req.body;
-    res.json({ "msg": msg });
+async function userLogin(req, res) {
+    var response = await checkUserReturnResponse(req)
+    res.json(response);
 }
 
 
-export {mainUsers, userLogin}
+export { mainUsers, userLogin }
