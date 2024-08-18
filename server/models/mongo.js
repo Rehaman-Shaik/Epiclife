@@ -25,7 +25,7 @@ class MongoDBClient {
         const collection = this.getCollection(collectionName);
         try {
             const result = await collection.insertOne(document);
-            console.log(`Document inserted with _id: ${result.insertedId}`);
+            return result
         } catch (error) {
             console.error("Failed to insert document", error);
         }

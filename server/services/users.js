@@ -1,6 +1,6 @@
 import { MongoDBClient } from '../models/mongo.js'
 
-async function checkUserReturnResponse(req){
+async function checkUserReturnResponse(req) {
     const mongoClient = new MongoDBClient();
     await mongoClient.connect();
     const result = req.body;
@@ -18,4 +18,26 @@ async function checkUserReturnResponse(req){
     return response
 }
 
-export {checkUserReturnResponse}
+async function insertUserReturnResponse(req) {
+    const mongoClient = new MongoDBClient();
+    await mongoClient.connect();
+    const result = req.body;
+    const email = result['email']
+    const password = result['password']
+    const retrivedDocument = await mongoClient.findDocument("Users", { email: email });
+    if (retrivedDocument) {
+        var response = { "shouldSignup": 'alreadypresent' }
+    } else {
+        const insertedDocument = await mongoClient.insertDocument("Users", { 'email': email, 'password': password });
+        if (insertedDocument['acknowledged'] == true) {
+            var response = { "shouldSignup": true }
+        } else {
+            console.log('else');
+            var response = { "shouldSignup": false }
+        }
+    }
+    return response
+}
+
+
+export { checkUserReturnResponse, insertUserReturnResponse }
