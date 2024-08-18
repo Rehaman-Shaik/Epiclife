@@ -1,0 +1,119 @@
+
+/* For width smaller than 400px: */
+body {
+  background-image: url(../assets/images/portfolio/potrait.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#social{
+  padding-top: 25px;
+  font-size: 20px;
+  font-weight: bolder;
+  position: fixed;
+  left: 30%;
+}
+
+#justify{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pos{
+  padding-left: 45px;
+  padding-right: 15px;
+  font-size: 15px;
+  height: auto;
+}
+
+#pad{
+  padding-left: 20% ;
+}
+
+#pos2{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0px;
+  border: 4px solid black;
+}
+
+
+
+/* For width 800px and larger: */
+@media only screen and (min-width: 800px) {
+  body { 
+    background-image: url(../assets/images/portfolio/BlurBGLandscape.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+.pos{
+    position: fixed;
+    left: 45%;
+    top: 25%;
+    width: 650px;
+  }
+
+  #pos2 {
+    position: fixed;
+    left: 3%;
+    top: 25%;
+    width: 300px;
+  }
+
+  #pad{
+    padding-left: 30%;
+  }
+
+  #social{
+    position: fixed;
+    left: 45%;
+    top: 80%;
+    width: 300px;
+  }
+
+  img {
+    height: 15%;
+    width: 15%;
+  }
+
+  .fontsize25{
+    font-size: 25px;
+  }
+
+  #fontintro{
+    font-size: 21px;
+  }
+  #fontqoute{
+    font-size: 30px; 
+  }
+}
+
+
+/* Same for All Screen Sizes */
+.navbar{
+    border-bottom: 3px solid rgb(255, 127, 80);
+  }
+.active{
+    background-color: whitesmoke;
+    border: 3px solid rgb(255, 127, 80);
+}
+
+.hov :hover {
+    transition: transform 0.5s ease-out;
+    transform: scale(1.1);
+    
+  }
+
+  .fontpops{
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .fontopen{
+    font-family: 'Andika', sans-serif;
+  }
+
+  img{
+    height: 10%;
+    width: 10%;
+  }
