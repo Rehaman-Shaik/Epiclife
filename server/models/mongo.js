@@ -1,9 +1,12 @@
 import { MongoClient } from 'mongodb';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 class MongoDBClient {
     constructor() {
-        this.uri = "mongodb+srv://shaikrehamanrp:8olXTzYp0Jyym26O@rehaman.ud7vepx.mongodb.net/?retryWrites=true&w=majority&appName=Rehaman";
-        this.dbName = "EpicLife";
+        this.uri = process.env.MONGO_URI;
+        this.dbName = process.env.MONGODB_NAME;
         this.client = new MongoClient(this.uri, { useNewUrlParser: true, useUnifiedTopology: true });
     }
 
