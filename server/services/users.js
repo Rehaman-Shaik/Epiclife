@@ -11,7 +11,7 @@ async function checkUserReturnResponse(req) {
     if (document == null) {
         var response = { "shouldLogin": false }
     } else if (password == document.password) {
-        var response = { "shouldLogin": true }
+        var response = { "shouldLogin": true , "token":document._id}
     } else {
         var response = { "shouldLogin": false }
     }
