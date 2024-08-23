@@ -44,6 +44,18 @@ class MongoDBClient {
         }
     }
 
+    async findAllDocuments(collectionName, query) {
+        const collection = this.getCollection(collectionName);
+        try {
+            const documents = await collection.find(query).toArray();
+            return documents;
+        } catch (error) {
+            console.error("Failed to find documents", error);
+            throw error;
+        }
+    }
+    
+
     async close() {
         try {
             await this.client.close();

@@ -3,6 +3,7 @@ import express from 'express';
 import financeRouter from './routes/financeRouter.js'
 import usersRouter from './routes/usersRouter.js'
 import portfolioRouter from './routes/portfolioRouter.js'
+import todoRouter from './routes/todoRouter.js'
 import { mainController } from './controllers/mainController.js';
 import cors from "cors"
 
@@ -24,3 +25,4 @@ app.get("/", mainController);
 app.use("/", financeRouter)
 app.use("/", usersRouter)
 app.use("/", portfolioRouter)
+app.use("/", todoRouter)
