@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/newPorfolio.css">
+    <style>
+        footer {
+            background-color: #333;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer div {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('nav.ejs') %>
+        <section style="display: flex; align-items: center; height: 100vh; padding: 0 5%;">
+            <div style="display: flex; flex: 1; max-width: 1200px; margin: 0 auto;">
+                <div style="flex: 2; display: flex; flex-direction: column; justify-content: center;">
+                    <h1 style="font-size: 2.5em; line-height: 1.2; margin-bottom: 20px;">
+                        Hi, my name is <br>
+                        <span style="color: #ff4b4b; font-size: 3em;">Rehaman</span>
+                    </h1>
+                    <p style="font-size: 1.25em; line-height: 1.5; color: #555;">
+                        I'm a <span style="color: #ff4b4b; font-size: 1.5em;">Full-Stack Developer</span> with a passion
+                        for
+                        building web applications and solving complex problems.
+                    </p>
+                </div>
+                <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                    <div style="height: 60%; width: auto;">
+                        <img style="height: 100%; width: auto; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+                            src="/assets/images/newPortfolio/cartoon_guy.jpeg" alt="Rehaman">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section style="display: flex; justify-content: center; align-items: center; padding: 50px 0;">
+            <div style="max-width: 800px; text-align: left;">
+                <h2 style="font-size: 2em; margin-bottom: 20px; color: #333;">About Me</h2>
+                <p style="font-size: 1.25em; line-height: 1.6; color: #555;">
+                    I’m Rehaman, a Full-Stack Developer with a deep passion for crafting dynamic and user-friendly web
+                    applications.
+                    With experience in both front-end and back-end technologies, I enjoy building solutions that are not
+                    only functional but
+                    also provide a seamless user experience.
+                </p>
+                <p style="font-size: 1.25em; line-height: 1.6; color: #555; margin-top: 20px;">
+                    Over the years, I’ve honed my skills in various programming languages, frameworks, and tools.
+                    Whether
+                    it's developing robust APIs,
+                    designing intuitive interfaces, or optimizing performance, I thrive on the challenges that come with
+                    turning ideas into reality.
+                </p>
+            </div>
+        </section>
+        <hr>
+        <section style="padding: 50px 0; background-color: #f9f9f9;">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.5em; margin-bottom: 20px; color: #333;">Projects</h2>
+                <p style="font-size: 1.25em; line-height: 1.6; color: #555;">
+                    Here are a few examples of the projects I’ve worked on, including full-stack development and game
+                    development.
+                </p>
+                <a href="/portfolio/projects"
+                    style="display: inline-block; margin-top: 30px; padding: 10px 20px; font-size: 1.2em; color: #fff; background-color: #ff4b4b; text-decoration: none; border-radius: 5px;">
+                    View All Projects
+                </a>
+            </div>
+        </section>
+        <%- include('footer.ejs') %>
+
+
+
+</body>
+
+</html>
