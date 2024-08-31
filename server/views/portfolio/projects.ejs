@@ -77,19 +77,19 @@
 </head>
 
 <body>
-    <%- include('nav.ejs') %>
+    <%- include('partials/nav.ejs') %>
 
     <section>
         <h2>My Projects</h2>
         <% projects.forEach(project => { %>
             <div class="project-cards" style="display: flex;">
-                <%- include('projectCard.ejs', {"project": project}) %>
+                <%- include('partials/projectCard.ejs', {"project": project}) %>
             </div>
         <% }) %>
 
     </section>
 
-    <%- include('footer.ejs') %>
+    <%- include('partials/footer.ejs') %>
 </body>
 
 
