@@ -45,6 +45,13 @@ html {
     color: #555;
 }
 
+/* Image Styling */
+.introSectionDiv1 > div:last-child img {
+    border-radius: 50%;
+    height: 500px;
+    width: auto;
+}
+
 /* About Section Styling */
 .about-section {
     display: flex;
@@ -119,7 +126,8 @@ html {
     }
 
     .introSectionDiv1 {
-        flex-direction: column; /* Original flex direction on larger screens */
+        flex-direction: column;
+        align-items: center;
     }
 
     .intro-text h1 {
@@ -136,11 +144,10 @@ html {
         text-align: center;
     }
 
-    /* Remove image on mobile */
-    .introSectionDiv1>div:last-child {
-        margin-top: 0; /* Remove margin when not needed */
-        height: auto; /* Restore original image size */
-        width: 400px;
+    .introSectionDiv1 > div:last-child img {
+        height: 300px;
+        width: 250px;
+        margin-top: 20px; /* Space between content and image */
     }
 
     .about-content,
