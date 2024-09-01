@@ -15,11 +15,17 @@ html {
 
 .introSectionDiv1 {
     display: flex;
-    flex: 1;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column; /* Update this for responsiveness */
+    align-items: center;
 }
 
+.introSectionDiv1>div:first-child {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Center content on smaller screens */
+}
 /* Intro Section Styling */
 .intro-text {
     flex: 2;
@@ -43,6 +49,12 @@ html {
     font-size: 1.25em;
     line-height: 1.5;
     color: #555;
+}
+
+.introSectionDiv1>div:last-child {
+    height: 200px;
+    width: 200px;
+    margin-top: 20px; /* Add margin to separate image from content */
 }
 
 /* About Section Styling */
@@ -119,8 +131,7 @@ html {
     }
 
     .introSectionDiv1 {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Original flex direction on larger screens */
     }
 
     .intro-text h1 {
@@ -139,7 +150,9 @@ html {
 
     /* Remove image on mobile */
     .introSectionDiv1>div:last-child {
-        display: none;
+        margin-top: 0; /* Remove margin when not needed */
+        height: auto; /* Restore original image size */
+        width: 400px;
     }
 
     .about-content,
