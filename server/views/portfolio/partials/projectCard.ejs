@@ -71,15 +71,20 @@
 
 <!-- Individual Project Card -->
 <div class="project-card">
-    <img src="/assets/images/portfolio/BlurBGLandscape.jpeg" alt="Project Image" class="project-image" />
+    <% if (project.image) { %>
+        <img src="<%= project.image %>" alt="<%= project.title %>" class="project-image">
+    <% } else { %>
+        <img src="/assets/images/NoImg.jpg" alt="Default Image" class="project-image">
+    <% } %>
+    
     <div class="project-content">
         <h3 class="project-title">
             <%= project.projectTitle %>
         </h3>
         <p class="project-description">
-            A brief description of the project. This project showcases full-stack development, featuring both front-end
-            and back-end technologies.
+            <%= project.description.length > 120 ? project.description.substring(0, 120) + '...' : project.description %>
         </p>
+        
         <a href="project/<%= project.metaUrl %>" class="project-button">View Details</a>
     </div>
 </div>
