@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDH44FSX7F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QDH44FSX7F');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - My Projects</title>
@@ -99,18 +108,18 @@
 <body>
     <%- include('partials/nav.ejs') %>
 
-    <section>
-        <h2>My Projects</h2>
-        <div class="project-cards-container">
-            <% projects.forEach(project => { %>
-                <div class="project-card">
-                    <%- include('partials/projectCard.ejs', {"project": project}) %>
-                </div>
-            <% }) %>
-        </div>
-    </section>
+        <section>
+            <h2>My Projects</h2>
+            <div class="project-cards-container">
+                <% projects.forEach(project=> { %>
+                    <div class="project-card">
+                        <%- include('partials/projectCard.ejs', {"project": project}) %>
+                    </div>
+                    <% }) %>
+            </div>
+        </section>
 
-    <%- include('partials/footer.ejs') %>
+        <%- include('partials/footer.ejs') %>
 </body>
 
 </html>
