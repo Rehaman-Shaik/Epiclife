@@ -12,5 +12,8 @@ async function projectDetails(req, res) {
     const project = await returnProject(metaUrl)
     res.render("portfolio/projectDetails.ejs", { "project": project });
 }
+function renderDrumKit(req, res) {
+    res.render("projects/drumKit.ejs")
+}
 
-export {sendPortfolioHtml, projects, projectDetails, returnProject }
+export { sendPortfolioHtml, projects, projectDetails, returnProject, renderDrumKit }
