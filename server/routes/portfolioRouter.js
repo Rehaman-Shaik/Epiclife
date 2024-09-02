@@ -5,6 +5,6 @@ const portfolioRouter = express.Router();
 
 portfolioRouter.get("/portfolio", sendPortfolioHtml)
 portfolioRouter.get("/portfolio/projects", projects)
-portfolioRouter.get("/portfolio/project/:metaUrl", projectDetails)
+portfolioRouter.get("/portfolio/project-details/:metaUrl", projectDetails)
 
 export default portfolioRouter
