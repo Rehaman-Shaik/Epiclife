@@ -4,9 +4,10 @@ async function addWatchList(req) {
     const name = req.body.name
     const isPlayed = req.body.isPlayed
     const mediaType = req.body.mediaType
+    const id = req.body.id
     const mongoClient = new MongoDBClient();
     await mongoClient.connect();
-    const insertedDocument = await mongoClient.insertDocument("WatchList", { "userId": req.params.userId, "name": name, "isPlayed":isPlayed, "mediaType":mediaType });
+    const insertedDocument = await mongoClient.insertDocument("WatchList", { "userId": req.params.userId, "name": name, "isPlayed":isPlayed, "mediaType":mediaType, "id":id });
     if (insertedDocument.acknowledged == true){
         return true
     } else {
