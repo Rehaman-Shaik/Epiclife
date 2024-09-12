@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/chat" element={ <Chat />} />
+        <Route path="/react/chat" element={ <Chat />} />
       </Routes>
     </Router>
     // <Chat />
