@@ -8,14 +8,20 @@ import diaryRouter from './routes/diaryRouter.js'
 import watchListRouter from './routes/watchListRouter.js'
 import { mainController } from './controllers/mainController.js';
 import cors from "cors"
+import path from 'path'
+import { fileURLToPath } from 'url';
+
 
 dotenv.config();
 const app = express();
 const port = process.env.PORT
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 app.use(express.static("public"))
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 app.set('view engine', 'ejs');
 
 
@@ -32,3 +38,12 @@ app.use("/", todoRouter)
 app.use("/", diaryRouter)
 app.use("/", watchListRouter)
 app.use("/", todoRouter)
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'), function (err) {
+        if (err) {
+            res.redirect("/");
+        }
+    });
+});
