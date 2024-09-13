@@ -5,12 +5,14 @@ import Chat from './components/Chat'
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/react/chat" element={ <Chat />} />
-      </Routes>
-    </Router>
-    // <Chat />
+    <>
+      <Router>
+        <Routes>
+          <Route path="/react/chat" element={<Chat />} />
+        </Routes>
+      </Router>
+      {/* <Chat /> */}
+    </>
   )
 }
 
