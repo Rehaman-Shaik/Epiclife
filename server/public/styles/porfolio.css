@@ -1,3 +1,4 @@
+/* General styling */
 body,
 html {
     margin: 0;
@@ -11,6 +12,7 @@ html {
     align-items: center;
     height: 100vh;
     padding: 0 5%;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in effect for the intro section */
 }
 
 .introSectionDiv1 {
@@ -26,12 +28,14 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: slideIn 1.5s ease-out;
 }
 
 .intro-text h1 {
     font-size: 2.5em;
     line-height: 1.2;
     margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .intro-text span {
@@ -43,6 +47,7 @@ html {
     font-size: 1.25em;
     line-height: 1.5;
     color: #555;
+    animation: fadeIn 2.5s ease-in-out;
 }
 
 /* Image Styling */
@@ -50,6 +55,11 @@ html {
     border-radius: 50%;
     height: 500px;
     width: auto;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.introSectionDiv1 > div:last-child img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 /* About Section Styling */
@@ -63,6 +73,7 @@ html {
 .about-content {
     max-width: 800px;
     text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .about-content h2 {
@@ -88,6 +99,7 @@ html {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .projects-content h2 {
@@ -111,11 +123,12 @@ html {
     background-color: #ff4b4b;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .projects-content a:hover {
     background-color: #e24343;
+    transform: translateY(-5px); /* Bounce effect */
 }
 
 /* Mobile view adjustments */
@@ -147,7 +160,7 @@ html {
     .introSectionDiv1 > div:last-child img {
         height: 300px;
         width: 250px;
-        margin-top: 20px; /* Space between content and image */
+        margin-top: 20px;
     }
 
     .about-content,
@@ -163,5 +176,70 @@ html {
     .about-content p,
     .projects-content p {
         font-size: 1.1em;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Typing Effect Styling */
+.typing-effect {
+    position: relative;
+    width: 14em; /* Adjust width for the name */
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 4s steps(8) 1s 1 normal both,
+               blinkTextCursor 500ms steps(8) infinite normal;
+}
+
+/* Animation */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 7ch; /* Adjust width for 'Rehaman' */
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
     }
 }
