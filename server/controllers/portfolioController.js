@@ -21,4 +21,8 @@ function renderDrumKit(req, res) {
     res.render("projects/drumKit.ejs")
 }
 
-export { sendPortfolioHtml, projects, projectDetails, returnProject, renderDrumKit }
+function renderSimonGame(req, res) {
+    requestLog(req)
+    res.render("projects/simonGame/index.ejs")
+}
+export { sendPortfolioHtml, projects, projectDetails, returnProject, renderDrumKit, renderSimonGame }
