@@ -11,7 +11,7 @@ async function checkUserReturnResponse(req) {
     if (document == null) {
         var response = { "shouldLogin": false }
     } else if (password == document.password) {
-        var response = { "shouldLogin": true , "token":document._id}
+        var response = { "shouldLogin": true, "token": document._id }
     } else {
         var response = { "shouldLogin": false }
     }
@@ -29,14 +29,16 @@ async function insertUserReturnResponse(req) {
         var response = { "shouldSignup": 'alreadypresent' }
     } else {
         const insertedDocument = await mongoClient.insertDocument("Users", { 'email': email, 'password': password });
+        console.log(insertedDocument);
+        
         if (insertedDocument['acknowledged'] == true) {
-            var response = { "shouldSignup": true }
+            return insertedDocument
         } else {
             console.log('else');
             var response = { "shouldSignup": false }
+            return response
         }
     }
-    return response
 }
 
 
