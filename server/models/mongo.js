@@ -28,6 +28,7 @@ class MongoDBClient {
         const collection = this.getCollection(collectionName);
         try {
             const result = await collection.insertOne(document);
+            await this.close()
             return result
         } catch (error) {
             console.error("Failed to insert document", error);
@@ -38,6 +39,7 @@ class MongoDBClient {
         const collection = this.getCollection(collectionName);
         try {
             const document = await collection.findOne(query);
+            await this.close()
             return document;
         } catch (error) {
             console.error("Failed to find document", error);
@@ -48,13 +50,14 @@ class MongoDBClient {
         const collection = this.getCollection(collectionName);
         try {
             const documents = await collection.find(query).toArray();
+            await this.close()
             return documents;
         } catch (error) {
             console.error("Failed to find documents", error);
             throw error;
         }
     }
-    
+
 
     async close() {
         try {
@@ -67,6 +70,4 @@ class MongoDBClient {
 }
 
 
-// Usage
-
-export { MongoDBClient}
+export { MongoDBClient }
