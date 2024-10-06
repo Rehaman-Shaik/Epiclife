@@ -29,7 +29,7 @@ app.listen(port, () => {
     console.log('Server is started running on', process.env.DOMAIN)
 })
 
-app.get("/", mainController);
+app.get("/", mainController);   
 
 app.use("/", financeRouter)
 app.use("/", usersRouter)
@@ -40,7 +40,7 @@ app.use("/", watchListRouter)
 app.use("/", todoRouter)
 
 
-app.get('/react/chat', (req, res) => {
+app.get('/project/keeper-app', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist', 'index.html'), function (err) {
         if (err) {
             res.redirect("/");
