@@ -47,3 +47,11 @@ app.get('/project/keeper-app', (req, res) => {
         }
     });
 });
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'), function (err) {
+        if (err) {
+            res.redirect("/");
+        }
+    });
+});
