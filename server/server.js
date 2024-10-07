@@ -55,3 +55,12 @@ app.get('/', (req, res) => {
         }
     });
 });
+
+
+app.get('/project/epic-life', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'), function (err) {
+        if (err) {
+            res.redirect("/");
+        }
+    });
+});
