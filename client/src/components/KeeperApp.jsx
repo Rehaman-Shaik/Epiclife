@@ -3,10 +3,15 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import '../../public/styles.css'
 
 function KeeperApp() {
+
+  useEffect(() => {
+    document.title = 'Keeper App';
+  }, []);
+
   const [items, setItems] = useState([{ title: "Note title", content: "Note content" }])
 
   function deleteItem(id) {
