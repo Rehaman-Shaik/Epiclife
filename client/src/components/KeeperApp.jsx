@@ -4,8 +4,9 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 import { useState } from "react";
+import '../../public/styles.css'
 
-function App() {
+function KeeperApp() {
   const [items, setItems] = useState([{ title: "Note title", content: "Note content" }])
 
   function deleteItem(id) {
@@ -44,4 +45,4 @@ function App() {
   );
 }
 
-export default App;
+export default KeeperApp;
