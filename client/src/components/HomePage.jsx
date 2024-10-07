@@ -8,7 +8,7 @@ function HomePage() {
             <br></br>
             <a href="/project/epic-life">Go to EpicLife</a>
             <br></br>
-            <a href="/portfolio">Go to Portfolio</a>
+            <a href="https://rehamanshaikofficial.xyz/portfolio">Go to Portfolio</a>
         </>
     );
 }
