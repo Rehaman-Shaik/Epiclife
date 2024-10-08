@@ -19,7 +19,7 @@
     "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
-    "@types/react": "^18.2.56",
+    "@types/react": "^17.0.83",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.56.0",

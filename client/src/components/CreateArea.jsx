@@ -39,7 +39,12 @@ function CreateArea(props) {
         <textarea name="content" placeholder="Take a note..." rows="3" onChange={handleChange} value={note.content} />
         <button onClick={handleAddClick}>Add</button>
       </form>
-      {isEmpty && <p style={{ marginLeft: '35%', fontSize: 20, color: "red" }}>Please enter text in the input fields</p>}
+      {isEmpty && (
+  <p className="error-message" style={{ textAlign: 'center', color: 'red', margin: '10px 0' }}>
+    Please enter text in the input fields
+  </p>
+)}
+
     </div>
   );
 }

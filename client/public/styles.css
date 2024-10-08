@@ -3,14 +3,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   font-family: "Montserrat", sans-serif;
 }
+
 body {
   background: #eee;
   padding: 0 16px;
 }
 
+/* Header */
 header {
   background-color: #f5ba13;
   margin: auto -16px;
@@ -24,6 +27,7 @@ header h1 {
   font-weight: 200;
 }
 
+/* Footer */
 footer {
   position: absolute;
   text-align: center;
@@ -36,6 +40,8 @@ footer p {
   color: black;
   font-weight: bold;
 }
+
+/* Note */
 .note {
   background: #fff;
   border-radius: 7px;
@@ -45,10 +51,12 @@ footer p {
   margin: 16px;
   float: left;
 }
+
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
 }
+
 .note p {
   font-size: 1.1em;
   margin-bottom: 10px;
@@ -68,6 +76,7 @@ footer p {
   outline: none;
 }
 
+/* Form */
 form {
   position: relative;
   width: 480px;
@@ -77,6 +86,7 @@ form {
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
+
 form input,
 form textarea {
   width: 100%;
@@ -87,6 +97,7 @@ form textarea {
   font-family: inherit;
   resize: none;
 }
+
 form button {
   position: absolute;
   right: 18px;
@@ -100,4 +111,58 @@ form button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 0 8px;
+  }
+  
+  header {
+    padding: 12px 16px;
+  }
+  
+  form {
+    width: 90%; /* Take almost full width */
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .note {
+    width: 45%; /* Adjust width of notes */
+    margin: 10px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 0 4px;
+  }
+
+  header {
+    padding: 8px 12px;
+  }
+
+  form {
+    width: 100%; /* Full width on mobile */
+    margin: 10px auto;
+    padding: 8px;
+  }
+
+  .note {
+    width: 100%; /* Full width for each note */
+    margin: 8px 0;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
 }
