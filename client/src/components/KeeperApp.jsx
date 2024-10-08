@@ -13,6 +13,7 @@ function KeeperApp() {
   }, []);
 
   const [items, setItems] = useState([{ title: "Note title", content: "Note content" }])
+  const [shouldClean, setShoulClean] = useState(true)
 
   function deleteItem(id) {
     setItems((prevValue) => {
@@ -24,8 +25,11 @@ function KeeperApp() {
 
   function addItem(enteredText) {
     console.log(items);
+    if ( shouldClean){
+        setItems([])
+    }
+    setShoulClean(false)
     setItems(prevItems => {
-      console.log(prevItems)
       return [...prevItems, enteredText];
     });
   }
