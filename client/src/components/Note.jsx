@@ -1,17 +1,17 @@
 import React from "react";
-
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function Note(props) {
-  function handleClick(id){
+  function handleClick(id) {
     props.para1(id)
   }
   return (
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <button onClick={()=>{
+      <button style={{backgroundColor:"white"}} onClick={() => {
         handleClick(props.id)
-      }}>DEL</button>
+      }}><DeleteIcon /></button>
     </div>
   );
 }
