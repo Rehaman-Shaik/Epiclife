@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import KeeperApp from "./components/KeeperApp.jsx";
 import HomePage from "./components/HomePage";
-import EpicLife from "./components/EpicLife.jsx";
+import EpicLife from "./components/EpicLife/EpicLife.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
             <Routes>
                 <Route path="/project/keeper-app" element={<KeeperApp />} />
                 <Route path="/" element={<HomePage />} />
-                <Route path="/project/epic-life" element={<EpicLife />} />
+                <Route path="/epic-life/home" element={<EpicLife />} />
             </Routes>
         </Router>
     );
