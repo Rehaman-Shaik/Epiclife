@@ -5,6 +5,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .introSection {
@@ -12,7 +13,8 @@ html {
     align-items: center;
     height: 100vh;
     padding: 0 5%;
-    animation: fadeIn 1.5s ease-in-out; /* Fade-in effect for the intro section */
+    animation: fadeIn 1.5s ease-in-out;
+    /* Fade-in effect for the intro section */
 }
 
 .introSectionDiv1 {
@@ -51,15 +53,17 @@ html {
 }
 
 /* Image Styling */
-.introSectionDiv1 > div:last-child img {
+.introSectionDiv1>div:last-child img {
     border-radius: 50%;
     height: 500px;
     width: auto;
-    transition: transform 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
 }
 
-.introSectionDiv1 > div:last-child img:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+.introSectionDiv1>div:last-child img:hover {
+    transform: scale(1.05);
+    /* Scale effect on hover */
 }
 
 /* About Section Styling */
@@ -128,7 +132,8 @@ html {
 
 .projects-content a:hover {
     background-color: #e24343;
-    transform: translateY(-5px); /* Bounce effect */
+    transform: translateY(-5px);
+    /* Bounce effect */
 }
 
 /* Mobile view adjustments */
@@ -157,7 +162,7 @@ html {
         text-align: center;
     }
 
-    .introSectionDiv1 > div:last-child img {
+    .introSectionDiv1>div:last-child img {
         height: 300px;
         width: 250px;
         margin-top: 20px;
@@ -184,6 +189,7 @@ html {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -194,6 +200,7 @@ html {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -205,6 +212,7 @@ html {
         transform: translateY(20px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -214,7 +222,8 @@ html {
 /* Typing Effect Styling */
 .typing-effect {
     position: relative;
-    width: 14em; /* Adjust width for the name */
+    width: 14em;
+    /* Adjust width for the name */
     margin: 0 auto;
     border-right: 2px solid rgba(255, 255, 255, 0.75);
     font-size: 180%;
@@ -222,7 +231,7 @@ html {
     white-space: nowrap;
     overflow: hidden;
     animation: typewriter 4s steps(8) 1s 1 normal both,
-               blinkTextCursor 500ms steps(8) infinite normal;
+        blinkTextCursor 500ms steps(8) infinite normal;
 }
 
 /* Animation */
@@ -230,8 +239,10 @@ html {
     from {
         width: 0;
     }
+
     to {
-        width: 7ch; /* Adjust width for 'Rehaman' */
+        width: 7ch;
+        /* Adjust width for 'Rehaman' */
     }
 }
 
@@ -239,6 +250,7 @@ html {
     from {
         border-right-color: rgba(255, 255, 255, 0.75);
     }
+
     to {
         border-right-color: transparent;
     }
